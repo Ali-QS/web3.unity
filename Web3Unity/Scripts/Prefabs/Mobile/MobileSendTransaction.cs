@@ -22,5 +22,6 @@ public class MobileSendTransaction : MonoBehaviour
         string receipt = await Web3Mobile.SendTransaction(to, value, gas, data);
         print(receipt);
         ReceiptText.text = "Receipt: " + receipt;
+        //updated remotely!
     }
 }
