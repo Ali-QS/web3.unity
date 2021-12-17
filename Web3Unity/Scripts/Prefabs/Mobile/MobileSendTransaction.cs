@@ -21,6 +21,6 @@ public class MobileSendTransaction : MonoBehaviour
         string data = "0x";
         string receipt = await Web3Mobile.SendTransaction(to, value, gas, data);
         print(receipt);
-        ReceiptText.text = "Receipt: " + receipt;
+        ReceiptText.text = "The Receipt: " + receipt;
     }
 }
