@@ -11,7 +11,7 @@ public class EVM
   public class BoolResponse { public bool response; }
   public class IntResponse { public int response; }
 
-  private readonly static string host = "https://api.gaming.chainsafe.io/evm";
+  private readonly static string host = "https://testnets-api.opensea.io/asset";
 
   public static async Task<string> BalanceOf(string _chain, string _network, string _account, string _rpc = "")
   {

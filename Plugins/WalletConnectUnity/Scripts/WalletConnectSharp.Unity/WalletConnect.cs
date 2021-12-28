@@ -23,8 +23,6 @@ namespace WalletConnectSharp.Unity
     [RequireComponent(typeof(NativeWebSocketTransport))]
     public class WalletConnect : BindableMonoBehavior
     {
-        [SerializeField] private Button LoginButton;
-
         public Dictionary<string, AppEntry> SupportedWallets
         {
             get;
@@ -144,21 +142,21 @@ namespace WalletConnectSharp.Unity
             if (waitForWalletOnStart)
             {
                 StartConnect();
-                OnSocketConnected();
+                //OnSocketConnected();
             }
         }
 
-        async private void OnSocketConnected()
-        {
-            // when socket is connected, enable button 
-            bool connected = _transport.Opened;
-            while (!connected) {
-                await Task.Delay(500);
-                connected = _transport.Opened;
-            }
-            LoginButton.interactable = true;
-            print("ConnectURL: " + ConnectURL);
-        }
+        //async private void OnSocketConnected()
+        //{
+        //    // when socket is connected, enable button 
+        //    bool connected = _transport.Opened;
+        //    while (!connected) {
+        //        await Task.Delay(500);
+        //        connected = _transport.Opened;
+        //    }
+        //    LoginButton.interactable = true;
+        //    print("ConnectURL: " + ConnectURL);
+        //}
 
         public SavedSession SaveSession()
         {
